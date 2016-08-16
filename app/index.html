@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webpack Starter by Milos</title>
+	<style>
+		html, body { font-family: sans-serif; color: #2E2E2E; }
+		ul { margin: 0; padding: 0}
+		li { list-style: none }
+		.card { margin: .5em; padding: .5em; display: inline-block; border: 1px solid #ccc; }
+		.card li { margin-bottom: .2em }
+		.card:hover { border-color: orange; cursor: pointer; outline: 1px solid orange}
+		.important {font-weight: bold}
+	</style>
+</head>
+<body>
+<h1>Milos starter</h1>
+
+	<script id="template" type="x-tmpl-mustache">
+		
+		<ul class="cards">
+		{{#users}}
+			<ul class="card">
+				<li>{{id}}</li>
+				<li class="important">{{first_name}} {{last_name}}</li>
+				<li>{{email}}</li>
+				<li>{{gender}}</li>
+				<li>{{ip_address}}</li>
+			</ul>
+		{{/users}}
+		</ul>
+
+	</script>
+
+<div id="target"></div>
+
+</body>
+<script type="text/javascript" src="../dist/scripts.min.js"></script>
+</html>
