@@ -4,24 +4,21 @@ import api from '../shared/api'
 
 let card = (function($, Brkovi, api) {
 
-	let templateEl, $el;
+	let template, $el;
 
 	function init() {
 		cacheDom();
-		
+
 		api.getUsers().then(users => render(users));
 	}
 
 	function cacheDom() {
-		$el = $('#target');
-		templateEl = $('#template');
+		$el = $('#users');
+		template = $('#users-template').html();
 	}
 
 	function render(users) {
-		var template = templateEl.html();
-		Brkovi.parse(template);
-		var rendered = Brkovi.render(template, {users: users});
-		$el.html(rendered);
+		$el.html(Brkovi.render(template, {users: users}));
 	}
 
 	init();
