@@ -13,13 +13,13 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     presets: ['es2015', 'stage-0'],
-                    plugins: ['transform-class-properties', 'transform-decorators-legacy'],
+                    plugins: ['transform-class-properties', 'transform-decorators-legacy']
                 }
             },
             {
                 test: /\.styl$/, 
                 loader: 'style!css!stylus'
-            },
+            }
         ]
     },
     output: {
@@ -29,6 +29,6 @@ module.exports = {
     plugins: debug ? [] : [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false }),
-    ],
+        new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false })
+    ]
 };

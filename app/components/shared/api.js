@@ -13,7 +13,7 @@ let api = (function() {
 
 	return {
 		getUsers: getUsers
-	}
+	};
 
 })();
 
