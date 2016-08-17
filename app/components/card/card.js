@@ -1,6 +1,7 @@
 import jQuery from 'jquery'
 import Brkovi from 'Mustache'
 import api from '../shared/api'
+import style from './card.styl'
 
 let card = (function($, Brkovi, api) {
 

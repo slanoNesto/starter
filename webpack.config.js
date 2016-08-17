@@ -7,15 +7,19 @@ module.exports = {
     entry: "./app/app.js",
     module: {
         loaders: [
-          {
-            test: /\.js?$/,
-            exclude: /(node_modules|bower_components)/,
-            loader: 'babel-loader',
-            query: {
-              presets: ['es2015', 'stage-0'],
-              plugins: ['transform-class-properties', 'transform-decorators-legacy'],
-            }
-          }
+            {
+                test: /\.js?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015', 'stage-0'],
+                    plugins: ['transform-class-properties', 'transform-decorators-legacy'],
+                }
+            },
+            {
+                test: /\.styl$/, 
+                loader: 'style!css!stylus'
+            },
         ]
     },
     output: {
